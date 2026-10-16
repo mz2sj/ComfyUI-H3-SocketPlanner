@@ -1,0 +1,20 @@
+{
+  "1": {"class_type": "LoadVideo", "inputs": {"file": "source.mp4"}},
+  "2": {"class_type": "LoadImage", "inputs": {"image": "reference.png"}},
+  "3": {
+    "class_type": "H3SocketPlanner",
+    "inputs": {
+      "reference_videos.video_1": ["1", 0],
+      "reference_images.image_1": ["2", 0],
+      "width": 768,
+      "height": 1024,
+      "reference_seconds": 0,
+      "video_mode_1": "可编辑参考",
+      "video_mode_2": "可编辑参考",
+      "video_mode_3": "可编辑参考",
+      "video_audio": false,
+      "global_prompt": ""
+    }
+  },
+  "4": {"class_type": "PreviewAny", "inputs": {"source": ["3", 0]}}
+}
